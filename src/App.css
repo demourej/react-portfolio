@@ -1,0 +1,236 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  line-height: 1;
+  font-family: sans-serif;
+}
+
+​h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+
+​input,
+select,
+option,
+optgroup,
+textarea,
+button,
+pre,
+code {
+  font-size: 100%;
+  font-family: inherit;
+}
+
+​ol,
+ul {
+  list-style: none;
+}
+
+:root {
+  --space-blue: #2B3A67;
+  --dark-electric: #496A81;
+  --steel-teal: #619394;
+  --sage: #B3AF8F;
+  --mellow-apricot: #FFC482;
+  --white: whitesmoke;
+  --gray: slategray;
+}
+
+h1 {
+  font-size: 45px;
+  color: var(--white);
+  line-height: 80px;
+  font-family: Monaco;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  /* border-bottom: var(--space-blue) solid 2px; */
+  z-index: 1;
+  background-color: var(--white);
+  font-family: Monaco;
+}
+
+nav a {
+  color: var(--space-blue);
+  padding: 20px 25px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.contact_button {
+  text-decoration: none;
+  background-color: var(--mellow-apricot);
+  padding: 20px 25px;
+  font-weight: bold;
+}
+
+main {
+  display: flex;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+#about_me {
+  background-color: var(--dark-electric);
+  width: 100%;
+}
+
+.right_side {
+  background-color: var(--dark-electric);
+  color: var(--white);
+  margin-right: 18%;
+  margin-left: 15%;
+  text-align: right;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#my_work {
+  /* padding-top: 60px; */
+  background-color: var(--steel-teal);
+  color: var(--white);
+  width: 100%;
+}
+
+#my_work h1 {
+  padding-left: 5%;
+}
+
+.main_work {
+  flex: 1;
+  /* padding: 7%; */
+  /* text-align: left; */
+}
+
+/* 
+What does the justify-content property do?
+It is used to align the flex items; in our case, the product cards 
+*/
+.works {
+  flex: 4;
+  /* padding: 7%; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* 
+What is the flex property a shorthand property for?
+It is a shorthand property for the flex-grow, flex-shrink, and flex-basis properties 
+What is it doing here?
+We are making the product card not growable, not shrinkable, and with an initial length of 400px 
+*/
+.col{
+  padding: 0;
+}
+
+.space-blue{
+  /* background-color: var(--space-blue); */
+}
+
+.card {
+  padding: 10px;
+  flex: 0 0 400px;
+  background-color: var(--space-blue);
+  text-align: center;
+  /* border-radius: 0; */
+  border: var(--steel-teal) solid 10px;
+}
+
+.card header {
+  padding-bottom: 10px;
+  font-size: 20px;
+  color: var(--white);
+}
+
+.card p {
+    padding-bottom: 5px;
+}
+
+.card a {
+  color: var(--white);
+  padding-top: 5px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.card img {
+  width: 100%;
+}
+
+#contact_me {
+  width: 100%;
+  background-color: var(--sage);
+  color: var(--white);
+  text-align: center;
+}
+
+.contact_class {
+  padding: 2% 3%;
+  text-decoration: none;
+  color: #2B3A67;
+  font-size: 18px;
+  display: inline-flex;
+}
+
+footer {
+  padding-bottom: 30px;
+  line-height: 30px;
+  background-color: var(--sage);
+  z-index: 1;
+  text-align: center;
+  width: 100%;
+}
+
+.footer_dark {
+  color: #2B3A67;
+  font-weight: bold;
+  font-size: 16px;
+  text-shadow: 1px 1px var(--gray);
+}
+
+.footer_light {
+  color: var(--white);
+  font-weight: lighter;
+  font-size: 14px;
+  text-shadow: 1px 1px var(--gray);
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+  main {
+      margin-top: 65px;
+  }
+  .about_two {
+      margin-right: 10%;
+  }
+  .float-right {
+      margin-left: 10%;
+  };
+}
